@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./css/LineIcons.css";
+import "./css/main.css";
+import "./css/responsive.css";
+
+import { Navbar, Mai, About, Services, Form, Footer } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header id="home" className="vin-area">
+        <div className="overlay">
+          <span></span>
+          <span></span>
+        </div>
+        <Navbar />
+        <Mai />
       </header>
+      <About />
+      <Services />
+      <Form />
+      <Footer />
+      <a href="#" className="back-to-top">
+        <i className="lni-chevron-up"></i>
+      </a>
     </div>
   );
 }
